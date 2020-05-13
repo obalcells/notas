@@ -133,7 +133,15 @@ export default class Media extends React.Component {
             "alemana": alemana,
             "española": española,
             "exists": true,
+            "isLoading": true,
         }
+        this.setState({ resultado: resultado });
+        setTimeout(this.afterLoading.bind(this), 3000);
+    }
+
+    afterLoading() {
+        let resultado = this.state.resultado;
+        resultado.isLoading = false;
         this.setState({ resultado: resultado });
     }
 
@@ -195,7 +203,7 @@ export default class Media extends React.Component {
                     {this.state.resultado.isLoading &&
                         <span>
                             <SyncOutlined spin /> &nbsp;
-                            Calculando...
+                            Calculando
                         </span>
                     }
                     {!this.state.resultado.isLoading &&

@@ -204,7 +204,6 @@ export default class Tachar extends React.Component {
     }
 
     render() {
-        console.log(this.state.tachadas);
         return (
             <div>
                 <div className="subtitulo" style={{ marginBottom: "20px" }}>
