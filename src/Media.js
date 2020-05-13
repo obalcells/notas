@@ -151,7 +151,7 @@ export default class Media extends React.Component {
         }
         const halbajhrs = [1, 2, 3, 4];
         return (
-            <div>
+            <div style={{marginBottom:"50px"}}>
                 <div className="subtitulo">
                     Con los ajustes que has realizado podrás calcular la nota media que tendrás de todos los semestres.
                     Las cuatro notas semestrales son 2 tercios de tu nota global, 600 de los 900 puntos que puedes conseguir en total.
