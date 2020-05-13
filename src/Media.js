@@ -158,7 +158,7 @@ export default class Media extends React.Component {
                     Las notas de este último semestre son bastante predecibles con la mayoría de profes por lo que esta nota se supone
                     que se tiene que acercar bastante a la realidad.
                     <br /><br />
-                    Por cierto, también es importante mencionar el punto 1) c) del apartado §7 de <a href="">este</a> documento, que creo que quiere decir que es muy estúpido no esforzarse este último semestre:
+                    Por cierto, también es importante mencionar el punto 1) c) del apartado §7 de <a href="https://github.com/OscarBalcells/notas/blob/master/public/Normativa_para_la_obtención_del_Allgemeine_Hochschulreife.pdf">este</a> documento, que creo que quiere decir que es muy estúpido no esforzarse este último semestre:
                     <br />
                     <b>
                         En caso de que una asignatura obligatoria extracurricular aprobada sobre la base de una
