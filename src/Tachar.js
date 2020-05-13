@@ -125,15 +125,18 @@ export default class Tachar extends React.Component {
         if(types["Kunst"] < 3) message += "Necesitas como mínimo 3 notas de Kunst o Musik\n";
         //8. maximo 3 de deporte
         //implicito
-        //9. minimo 2 de todos los idiomas
+        //9. minimo 2 de todos los idiomas QUE TENGAS NUEVOS DE LA FASE INTRODUCTORIA
+        /*
+        De momento no aplica porque no tenemos fase introductoria (tenemos la 9 y la 10) bueno esto es muy raro nosé
         let done = false;
         this.props.asignaturasSeleccionadas.forEach((nombre) => {
-            if(!done && Asignaturas[nombre].type === "Language" && this.cntTachada(nombre) > 2) {
+            if(!done && Asignaturas[nombre].type === "Language" && this.cntTachada(nombre) > 2 && (nombre === "Català" || nombre === ) {
                 console.log(nombre);
                 message += "Para cada asignatura de idiomas has de contabilizar (no tachar) por lo menos 2 notas\n";
                 done = true;
             }
         });
+        */
         //10. minimo 14 entre ciencias e idiomas
         let oneLeft = 0;
         types["Language"] = 0;
@@ -149,14 +152,6 @@ export default class Tachar extends React.Component {
         if(types["Science"] + types["Language"] - oneLeft < 14) {
             message += "Entre ciencias naturales e idiomas (exceptuando alemán) has de contabilizar 14 notas semestrales. Solo contabilizan las notas de las asignaturas que no tengan 3 o más notas tachadas, de momento tienes " + (types["Science"] + types["Language"] - oneLeft).toString() + ".\n";
         }
-        //11. No puedes contar solo 1 nota de cualquier asignatura (?)
-        done = false;
-        this.props.asignaturasSeleccionadas.forEach((nombre) => {
-            if(!done && this.cntTachada(nombre) === 4) {
-                message += "Has de contabilizar como mínimo una nota de cada asignatura\n";
-                done = true;
-            }
-        });
 
         if(message === "") message = "Combinación válida";
         this.setState({ isReady: false, isLoading: true, message: message });
@@ -172,7 +167,7 @@ export default class Tachar extends React.Component {
                 <div className="resultadoComprobacion"
                     style={{
                         border: "1px solid green",
-                        backgroundColor: "rgba(115, 240, 115, 0.1)",
+                        backgroundColor: "rgba(115, 240, 115, 0.1)"
                     }}
                 >
                     <CheckCircleOutlined />
@@ -208,7 +203,6 @@ export default class Tachar extends React.Component {
             <div>
                 <div className="subtitulo" style={{ marginBottom: "20px" }}>
                     Para cada nota semestral que quieras sacar añade la asignatura. Solo puedes tachar notas de asignaturas que no tengas como examen del Abitur. Es obligatorio tachar como mínimo una nota de deporte, por eso está ahí puesta.
-
                     <br /><br />
                     <span style={{ fontSize: "1.1rem", lineHeight: "0.05 rem" }}>
                     Solo cuentan <b style={{ color: "#4633FF" }}>36</b> notas.
@@ -269,7 +263,7 @@ export default class Tachar extends React.Component {
                 {this.state.isAfterLoading && this.state.message === "Combinación válida" &&
                     <Tag color="success"
                         className="botonComprobacion"
-                        style={{ width: "150px" }}
+                        style={{ width: "160px" }}
                     >
                         <CheckCircleOutlined />
                         &nbsp;
@@ -291,23 +285,3 @@ export default class Tachar extends React.Component {
         );
     }
 }
-/*
-§ 7 (b)
-Los examinandos que, de acuerdo con el § 4 (3), se inscriban en un idioma
-extranjero nuevo en la fase introductoria ...
-En este idioma extranjero deben contabilizarse los resultados
-de al menos dos semestres escolares de la fase de
-cualificación en la calificación global.
-*/
-/*
-§ 7 (c)
-Del área de idiomas extranjeros (incluido el idioma local y un idioma extranjero
-conforme al § 7 (b)) y de ciencias naturales en conjunto, se deben contabilizar al
-menos catorce resultados semestrales. Si se contabilizan los resultados en una
-asignatura, se deberán computar los resultados de al menos dos semestres. En caso
-de que una asignatura obligatoria extracurricular aprobada sobre la base de una
-regulación de caso individual no se incluya en las asignaturas del examen Abitur
-del examinando, el examinando deberá obtener más de 0 puntos en dicha
-asignatura en cualquier semestre de la fase de cualificación y el resultado obtenido
-en como mínimo el último semestre deberá computarse para la calificación.
-*/

@@ -158,20 +158,7 @@ export default class Media extends React.Component {
                     Las notas de este último semestre son bastante predecibles con la mayoría de profes por lo que esta nota se supone
                     que se tiene que acercar bastante a la realidad.
                     <br /><br />
-                    Por cierto, también es importante mencionar el punto 1) c) del apartado §7 de <a href="https://github.com/OscarBalcells/notas/blob/master/public/Normativa_para_la_obtención_del_Allgemeine_Hochschulreife.pdf">este</a> documento, que creo que quiere decir que es muy estúpido no esforzarse este último semestre:
-                    <br />
-                    <b>
-                        En caso de que una asignatura obligatoria extracurricular aprobada sobre la base de una
-                        regulación de caso individual no se incluya en las asignaturas del examen Abitur
-                        del examinando, el examinando deberá obtener más de 0 puntos en dicha
-                        asignatura en cualquier semestre de la fase de cualificación y <span style={{color:"red"}}> el resultado obtenido
-                        en como mínimo el último semestre deberá computarse para la calificación.</span>
-                    </b>
-                    <br /><br />
-                    De momento esta última condición no la aplico porque no tengo muy clara la definición de "asignatura obligatoria extracurricular aprobada
-                    sobre la base de una regulación de caso individual" pero la menciono por si acaso.
-                    <br /><br />
-                    Por último, este programa también hace una conversión automática de los puntos raros del abitur (0 - 900) a nota española (0 - 10) y a nota tradicional alemana (1 - 6) con comas.
+                    Este programa también hace una conversión automática de los puntos raros del abitur (0 - 900) a nota española (0 - 10) y a nota tradicional alemana (1 - 6) con comas.
                 </div>
 				<Collapse accordion style={{ marginBottom: "15px" }}>
                     {halbajhrs.map(h => {
