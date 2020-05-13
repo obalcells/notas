@@ -1,0 +1,68 @@
+@import '~antd/dist/antd.css';
+
+.App {
+  width: 90%;
+  max-width: 820px;
+  margin: 50px auto 30px auto;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.titulo {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  line-height: 1.5rem;
+}
+
+.subtitulo {
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .divAsignaturas {
+    text-align: center;
+  }
+  .titulo {
+    text-align: center;
+  }
+}
+
+.asignatura {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  width: 90px;
+  height: 50px;
+  padding-top: 15px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nuevaAsignatura {
+  padding-top: 7.5px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  width: 100px;
+  height: 35px;
+  cursor: pointer;
+  background: #fff;
+  border-style: dashed;
+}
+
+.botonComprobacion {
+  padding-top: 10px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  display: block;
+}
+
+.resultadoComprobacion {
+  margin-top: 10px;
+  width: 95%;
+  border-radius: 5px;
+  padding: 10px;
+}
