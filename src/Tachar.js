@@ -263,7 +263,7 @@ export default class Tachar extends React.Component {
                 {this.state.isAfterLoading && this.state.message === "Combinación válida" &&
                     <Tag color="success"
                         className="botonComprobacion"
-                        style={{ width: "160px" }}
+                        style={{ width: "200px" }}
                     >
                         <CheckCircleOutlined />
                         &nbsp;
@@ -273,7 +273,7 @@ export default class Tachar extends React.Component {
                 {this.state.isAfterLoading && this.state.message !== "Combinación válida" &&
                     <Tag color="error"
                         className="botonComprobacion"
-                        style={{ width: "160px" }}
+                        style={{ width: "200px" }}
                     >
                         <CloseCircleOutlined />
                         &nbsp;
