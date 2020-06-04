@@ -81,7 +81,7 @@ export default class Media extends React.Component {
         console.log(this.props.tachadas, this.props.asignaturasSeleccionadas);
         //(valor medio de los resultados semestrales contabilizados) x 40
         let total = 0;
-        let totalNotas = 0;
+
         this.props.asignaturasSeleccionadas.forEach(asignatura => {
             /*
             if( Asignaturas[asignatura].required) { //de momento no se aplica
@@ -95,18 +95,18 @@ export default class Media extends React.Component {
                 }
             } else {
             */
+
             let siguientes = [this.state.notas.h4[asignatura], this.state.notas.h1[asignatura], this.state.notas.h2[asignatura], this.state.notas.h3[asignatura]];
-            siguientes.sort();
-            for(let i = this.cntTachada(asignatura); i < 4 && totalNotas < 36; i += 1) {
+            siguientes.sort(function(a, b) { return a - b; }); //default sorting is unicode string comparison
+            console.log("De asignatura ", asignatura, " hay ", this.cntTachada(asignatura), " tachadas");
+            const sumNow = total;
+
+            for(let i = this.cntTachada(asignatura); i < 4; i += 1) {
                 total += siguientes[i];
-                totalNotas += 1;
             }
+            console.log("De asignatura ", asignatura, " te cuentan ", total - sumNow);
         });
 
-        if(totalNotas < 36) {
-            message.error("No llegas a las 36 notas necesarias, tienes tan solo " + totalNotas.toString());
-            return;
-        }
         const puntos = Math.round((total / 36) * 40 * 1.5); //1.5 para simular el otro tercio
         let alemana = 0.0, española = 0.0;
 
