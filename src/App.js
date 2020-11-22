@@ -17,7 +17,7 @@ function App() {
         Todo el código de esta página se basa en <a href="https://github.com/OscarBalcells/notas/blob/master/public/Normativa_para_la_obtención_del_Allgemeine_Hochschulreife.pdf">este</a> documento y en <a href="https://github.com/OscarBalcells/notas/blob/master/public/Ordnung_zur_Erlangung_der_Allgemeinen_Hochschulreife an_Deutschen_Schulen_im_Ausland.pdf">este otro</a> (lo mismo en alemán pero con tablas conversión) y en <a href="https://www.dsbilbao.org/oferta-educativa/equivalencia-sistema-educativo-aleman-y-espanol/">esta</a> web. Puede haber algún error así que si te aburres y te apetece puedes leértelos para comprobar los resultados.
       </div>
       <Notas />
-      <div style="height:20px;"></div>
+      <div style="height:10px;"></div>
     </div>
   );
 }
